@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BASIC</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        p{
+            background-color: palevioletred;
+            /* text디자인시작 */
+        
+            letter-spacing: 2px;
+            word-spacing: 5px;
+        }
+
+        .italic{
+            font-style: italic;
+        }
+
+        .bigtext{
+            font-size: 24px;
+        }
+
+        .relativetext{
+            font-size: 120%;
+        }
+        
+        .em_parent{
+            font-size: 20px;
+        }
+
+        .em_child{
+            font-size: 1.5em;
+        }
+
+        .percent_parent{
+            font-size: 20px;
+        }
+
+        .percent_child{
+            font-size: 150%;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>CSS 기본 문법</h2>
+    <p>우선 적용</p>
+    <!-- 한칸 띄고 클래스를 적으면 중첩적용이 가능하다. -->
+    <p class="italic bigtext">font style과 font size 중첩적용 '1번'</p>
+    <p class="italic relativetext">font sytle과 font size 중첩적용 '1번'</p>
+    
+
+    <!-- em percent 비교 -->
+    <div class="em_parent">
+        <div class="em_child">
+            이 텍스트는 부모 글꼴의 1.5배 크기의 글꼴입니다.
+        </div>
+    </div>
+
+
+    <div class="percent_parent">
+        <div class="percent_child">
+            이 텍스트는 부모 글꼴의 150%크기의 글꼴입니다.
+        </div>
+    </div>
+
+    <div style="border: 3px solid black; padding: 15px; margin:15px;">
+        margin, border, padding을 가진 요소
+    </div>
+
+    <div style="border: 3px solid palevioletred; padding: 15px; text-align: center; margin: 15px;" >
+        hello world
+    </div>
+
+<div>
+    <table border = "1" style="border-collapse: collapse; text-align:center; margin: auto;">
+        <caption style="color: brown;">블랙핑크 공연일정</caption>
+    <thead>
+        <tr>
+            <th>시간</th>
+            <th>lovesick girls</th>
+            <th>ddodu-doodu</th>
+            <th>fire play</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td>13:30</td>
+            <td>내용2</td>
+            <td>내용2</td>
+            <td>내용2</td>
+        </tr>
+        <tr>
+            <td>내용3</td>
+            <td>내용4</td>
+            <td>내용2</td>
+            <td>내용2</td>
+        </tr>
+        <tr>
+            <td>내용5</td>
+            <td>내용6</td>
+            <td>내용7</td>
+            <td>내용2</td>
+        </tr>
+        
+    </tbody>
+    </table>
+</div>
+    
+</body>
+</html>
