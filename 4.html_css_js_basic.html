@@ -10,7 +10,7 @@
     <style>
         /* 태그선택 */
         p{
-            color: grey; text-align: right; text-decoration: overline;
+            color: grey; text-align: left; text-decoration: overline;
         }
 
         /* 클래스선택 */
@@ -22,8 +22,24 @@
         #para {
             text-align: center;
         }  
+        /* 자손선택자 */
+        div p {
+            color: blue;
+            ;
+        }
+        /* 자식선택자 */
+        div > h5 {
+            color: green;
+        }
         
     </style>
+
+<script>
+    document.getElementById("load1").innerHTML = "change1";
+    function updateDemo1(){
+
+    }
+</script>
 </head>
     <!-- css 1. inline스타일(해당 태그 안에서) -->
     <!-- 2. 내부스타일(head -> style) -->
@@ -58,6 +74,48 @@
     <!-- 외부 스타일 적용 -->
     <p id = "external"> 외부 스타일 적용</p>
 
+    <!-- 자손선택자 -->
+    <!-- div밑에 p 레드색상으로 바꿔 하면 section까지 바뀜 -->
+    <div>
+        <h2>자손선택자 예시</h2>
+        <p>첫번째 단락</p>
+        <section>
+            <p>두번째 단락</p>
+        </section>
+    </div>
+
+    <!-- 자식선택자는 꺽쇠를 이용 '>' -->
+    <!-- div밑에 p 레드색상으로 바꿔 -> section은 안바뀜 -->
+    <div>
+        <h2>자식선택자 예시</h2>
+        <h5>첫번째 단락</h5>
+        <section>
+            <h5>두번째 단락</h5>
+        </section>
+    </div>
+
+
+
+    <h2>javascript 예시</h2>
+    <p id="load1">JS로드 순서1
+        
+    </p>
+    <p id="load2">JS로드 순서2
+
+    </p>
+    <script>
+        document.getElementById("load2").innerHTML = "change2";
+    </script>
+
+    
+
+    <p>변경될 p태그 내용</p>
+    <button onclick="updateDemo1()"> 내용 변경 </button>
+
+    <P id = "demo2"> demo2 내용</P>
+    <button onclick="updateDemo2()">내용 변경</button>
+
+    <Script src="./js/my_js.js"></Script>
 
 </body>
 </html>

@@ -12,10 +12,12 @@
     <!-- form을 통한 전송의 기본 인코딩은 application/x-www-form-urlencoded 유알엘 인코딩형식-->
     <!-- form을 통한 파일전송을 포함하는 인코딩은 multipart/form-data -->
     <form action = "https://naver.com" method = "post" enctype="multipart/form-data"></form>
+    <!-- get은 민감하지 않은데이터를, post는 민감한 데이터를 전송 시 사용 -->
     <!-- id와 label문의 for와 일치관계 -->
     <!-- name = "username"은 서버에게 전송해주는 역할.  -->
         <label for="username">이름</label>
-        <input type="text" id="username" name ="name" maxlength="10" size="5">
+        <input type="text" id="username" name ="name" maxlength="10" size="5" value="조훈" readonly>
+        <!-- readonly,disabled 는 default 값 지정 후 입력 못하게 하는 역할 | disabled는 서버로 전송이 안 됨.-->
         <br>
         <br>
         <label for="useremail">이메일</label>
