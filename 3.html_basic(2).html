@@ -1,0 +1,26 @@
+<!-- 입력폼태그 : 사용자에게 입력을 받아서 서버에게 넘겨주는 역할 , 게시글 등록, 실용도 높다 -->
+<!-- 목적지 주소 , 통신방식 : get요청(데이터를 받아올때), post요청(일반적으로 데이터 전송) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BASIC 2</title>
+</head>
+<body>
+    <h2>회원가입 form 예제</h2>
+    <form action = "https://naver.com" method = "post"></form>
+    <!-- id와 label문의 for와 일치관계 -->
+    <!-- name = "username"은 서버에게 전송해주는 역할.  -->
+        <label for="username">이름</label>
+        <input type="text" id="username" name ="username" maxlength="10" size="5">
+        <br>
+        <br>
+        <label>이메일</label>
+        <input type="text" id="useremail" name = "useremail" maxlength="20" size="20">
+        
+
+    </form>
+    
+</body>
+</html>

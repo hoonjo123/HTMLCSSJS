@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML BASIC 1</title>
+        <style>
+            /* 구체적인게 우선이다. */
+            /* 인라인 스타일링이 우선이다. */
+            /*p {
+                background-color: yellow;
+            }*/
+            body{
+                background-color: white;
+            }
+            
+
+        </style>
+    </head>
+
+    <body> 
+        <h2>글자 styling 예시</h2>
+        <!-- 인라인 스타일링 -->
+        
+        <p style="background-color: orange;">1. 배경색 변경</p>
+        <p style="color:blueviolet;">2. 글자색 변경</p>
+        <!-- 픽셀로 지정하기, 사이즈로 지정하기, em/ rem 배율로 지정하기 -->
+        <p style="font-size: 20px;">3. 글자크기 변경</p>
+        <!-- 세미콜론으로 구분짓는 복합스타일링 -->
+        <p style="background-color: blue; color: white; font-size: 25px;text-align: center;">4. 복합 스타일링 변경</p>
+
+        <h2>이미지와 link 예제</h2>
+        <!-- a태그 -->
+        <!-- default는 현재탭에서이동, 새탭이동은 _blank -->
+        <a href="https://naver.com" target="_blank">네이버</a>
+        <p>"위 링크는 새탭에서 naver.com 을 여는 예시"</p>
+        
+        <!-- alt = 이미지가 없으면 뭘로 대체할래? 랄랄 -->
+        <p>
+            <a href="https://www.youtube.com/@ralral" target="_blank"><img src="./images/NISI20230508_0001260622_web.jpg" width="320px" height="214px" alt="랄랄" style="border: 8px solid skyblue;"></a>
+        </p>
+        <p>
+            <a href="https://naver.com" target="_blank"><img src="https://mblogthumb-phinf.pstatic.net/20150331_144/queen7165_1427733030232RdX55_JPEG/woozza_1397408986551.jpg?type=w420"
+            width="320px" height="214px" alt="랄랄" style="border: 8px solid goldenrod;"></a>
+        </p>
+
+        <!-- 리스트 대표태그 : ul(unordered), ol(ordered) -->
+        <ul style="list-style-type: square;">
+            <li>첫번째 아이템</li>
+            <li>두번째 아이템</li>
+            <li>세번째 아이템</li>
+        </ul>
+        <ol style="list-style-type: upper-roman;">
+            <li>아이템A</li>
+            <li>아이템B</li>
+            <li>아이템C</li>
+        </ol>
+
+        <h2>테이블 예제--중요하다</h2>
+        <!-- th 테이블헤드, tr 테이블 로우, td 테이블 데이터 -->
+        <table border="1" style="border-collapse: collapse;">
+            <caption>테이블명:무제</caption>
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <th>제목2</th>
+                <th>제목3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용22</td>
+            </tr>
+            <tr>
+                <td>내용3</td>
+                <td>내용4</td>
+                <td>내용2</td>
+            </tr>
+            <tr>
+                <td>내용50</td>
+                <td>내용60</td>
+                <td>내용2</td>
+            </tr>
+        </tbody>
+        </table>
+    </body>
+</html>

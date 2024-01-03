@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BASIC 1</title>
+    <style>
+        body {
+            background-color:white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* 인라인 스타일링이 우선이다. */
+        /*p {
+            background-color: yellow;
+        }*/
+
+    </style>
+</head>
+
+<body> 
+    <header>
+        <h1>훈이의 갤러리전</h1>
+    </header>
+
+    <h2>글자 styling 예시</h2>
+    <!-- 인라인 스타일링 -->
+    
+    <p style="background-color: orange;">1. 배경색 변경</p>
+    <p style="color:blueviolet;">2. 글자색 변경</p>
+    <!-- 픽셀로 지정하기, 사이즈로 지정하기, em/ rem 배율로 지정하기 -->
+    <p style="font-size: 20px;">3. 글자크기 변경</p>
+    <!-- 세미콜론으로 구분짓는 복합스타일링 -->
+    <p style="background-color: blue; color: white; font-size: 25px;text-align: center;">4. 복합 스타일링 변경</p>
+
+    <h2>이미지와 link 예제</h2>
+    <!-- a태그 -->
+    <!-- default는 현재탭에서이동, 새탭이동은 _blank -->
+    <a href="https://naver.com" target="_blank">네이버</a>
+    <p>"위 링크는 새탭에서 naver.com 을 여는 예시"</p>
+    
+    <!-- alt = 이미지가 없으면 뭘로 대체할래? 랄랄 -->
+    <p>
+        <a href="https://www.youtube.com/@ralral" target="_blank"><img src="./images/NISI20230508_0001260622_web.jpg" width="320px" height="214px" alt="랄랄" style="border: 8px solid skyblue;"></a>
+    </p>
+    <p>
+        <a href="https://naver.com" target="_blank"><img src="https://mblogthumb-phinf.pstatic.net/20150331_144/queen7165_1427733030232RdX55_JPEG/woozza_1397408986551.jpg?type=w420"
+        width="320px" height="214px" alt="랄랄" style="border: 8px solid goldenrod;"></a>
+    </p>
+
+    <footer>
+        기부하기
+    </footer>
+</body>
+</html>
