@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS basic</title>
+    <Script>
+        function showObject(){
+            //객체를 리터럴 방식으로 세팅하는법
+            var person = {name:"hoon", age:20, email:"hoon@naver.com"};
+            person.name = "kim";
+            person.password = "1234";
+            var str = "이름은 " + person.name + "나이는 " + person.age;
+            document.getElementById("result").innerHTML = str;
+        }
+
+        function convertType(){
+            //숫자 클래스는 Number가 제공, 문자클래스는 String, 참거짓 : boolean
+            var numStr = "10";
+            var str = "문자열";
+            var output = "Number 변환 : " + Number(numStr) + "<br>" +
+                        "String 변환 : " + String(10) + "<br>" +
+                        "Boolean 변환 : " + Boolean(0) + "<br>"
+            document.getElementById("result").innerHTML = output;
+        }
+
+        function showNaN(){
+            var output = "10" - "문자열";
+            console.log(output);
+            console.log(typeof output);
+            document.getElementById("result").innerHTML = output;
+        }
+
+        function showNull(){
+            var output1; //undefined
+            var output2 = null; //null의 타입이 object
+            var output = "output1의 타입은 " + (typeof output1) + "<br>"
+                        +"output2의 타입은 " + (typeof output2) + "<br>"
+                        +"output1 == output2" + (output1==output2) + "<br>"
+                        +"output1 === output2" + (output1===output2) //===는 타입까지 비교하는것. 타입이 다르므로 false 출력 
+                        
+            document.getElementById("result").innerHTML = output;
+        }
+
+        function showDateConversion(){
+            var date = new Date();
+            var date_num = date.getDate();
+            var date_str = date.toString();
+            document.getElementById("result").innerHTML = date_num;
+        }
+    </Script>
+</head>
+<body>
+    <h2> js 객체 </h2>
+    <button onclick="showObject()">객체생성</button>
+    <button onclick="convertType()">형변환</button>
+    <button onclick="showNaN()">NaN 에러 발생</button>
+    <button onclick="showNull()">undefine, null</button>
+    <button onclick="showDateConversion()">date변환</button>
+    <p id = "result">변환결과</p>
+</body>
+</html>
