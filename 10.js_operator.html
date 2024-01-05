@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS operator</title>
+    <script>
+    function showComparismEqual(){
+        var x = 3;
+        var y = "3";
+        document.getElementById("result").innerHTML =
+        "x == y 결과: " + (x == y) + "<br>" + //true
+        "x == y 결과: " + (x === y);        //false
+    }
+
+    function showComparismString(){
+        var x = "abc";
+        var y = "bcd";
+        document.getElementById("result").innerHTML =
+        "abc <= bcd:" + (x <= y); //true
+    }
+
+    var showOperatorResult = (a, b) => {
+        var bigger = (a > b)? a : b ;
+        document.getElementById("result").innerHTML = bigger;
+    }
+</script>
 </head>
 <body>
     <h2>JS 연산자 예시</h2>
     
+    <button onclick="showComparismEqual()">equal 비교연산자 결과</button>
+    <button style="background-color: orange;;" onclick="showComparismString()">문자 비교연산자 결과</button>
+    <button style="background-color: royalblue; width: 120px; padding: 120px;" onclick="showOperatorResult(3,4)">삼항연산자 결과</button>
+    <p id = "result">변환결과</p>
 </body>
 </html>

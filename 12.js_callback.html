@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS callback</title>
+    <script>
+        // 콜백함수 없음
+        function callBackExample1(){
+            alert("hello");
+        }
+
+        function callBackExample2(){
+            processUserInput(myCallback2);
+        }
+
+        function callBackExample3(){
+            processUserInput(myCallback2);
+        }
+
+        // 콜백함수 있음
+        function myCallback1(name){
+            console.log("안녕하세요 " + name + "님");
+        }
+
+        function myCallback2(name){
+            alert("안녕하세요 " + name + "님");
+        }
+
+        function processUserInput(callback){
+            let name = prompt("이름을 입력해주세요.");
+            callback(name);
+        }
+    </script>
+</head>
+<body>
+    <h2>콜백함수</h2>
+    <button onclick="callBackExample1()">일반적인함수</button>
+    <button onclick="callBackExample2()">콜백예제2</button>
+    <button onclick="callBackExample3()">콜백예제3</button>
+</body>
+</html>
