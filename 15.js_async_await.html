@@ -4,55 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Callback Hell</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </head>
 <body>
     <!-- jquery 라이브러리의 기술 : ajax (외부 api 요청) -->
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    
     <script>
         async function callBackImp(){
+            try{
             const response = await  $.ajax({
                 url:"https://jsonplaceholder.typicode.com/posts/1",
                 type:'GET',
                 dataType:'json'});
             console.log(response);
-        }
+            }catch(a){
+                console.log(e);
+            }
 
+            try{
+            const response = await axios.get("https://jsonplaceholder.typicode.com/posts/1")
+            console.log("axios ");
+            console.log(response);
+            }catch(a){
+                console.log(e);
+            }
+            // const response2 = await $.ajax({
+            //     url:"https://naver.com",
+            //             method :'POST',
+            //             dataType :'json',
+            //             data: response})
+            // console.log(response2);
+            // const response3 = await $.ajax({
+            //     url:"https://daum.com",
+            //     method :'POST',
+            //     dataType :'json',
+            //     data: response2})
+        
+            // console.log(response3);
+        }
+        callBackImp();
 
         //전체가 비동기로 움직이는 함수 => async function(){}
-        $(document).ready(function(){
-            $.ajax({
-                url:"https://jsonplaceholder.typicode.com/posts/1",
-                type:'GET',
-                dataType:'json',
-                success:function(response){
-                    console.log(response);
-                    $.ajax({
-                        url:"https://naver.com",
-                        method :'POST',
-                        dataType :'json',
-                        data: response, 
-                        success:function(response2){
-                            $.ajax({
-                                url:"https://naver.com",
-                                method :'POST',
-                                dataType :'json',
-                                data: response2, 
-                                success:function(response3){
-                                    console.log(response3)
-                            },
-                            error:function(){   
-                            }
-                        })
-                    },
-                error:function(){   
-                }
-            })
-        },
-        error:function(){
+//         $(document).ready(function(){
+//             $.ajax({
+//                 url:"https://jsonplaceholder.typicode.com/posts/1",
+//                 type:'GET',
+//                 dataType:'json',
+//                 success:function(response){
+//                     console.log(response);
+//                     $.ajax({
+//                         url:"https://naver.com",
+//                         method :'POST',
+//                         dataType :'json',
+//                         data: response, 
+//                         success:function(response2){
+//                             $.ajax({
+//                                 url:"https://daum.com",
+//                                 method :'POST',
+//                                 dataType :'json',
+//                                 data: response2, 
+//                                 success:function(response3){
+//                                     console.log(response3)
+//                             },
+//                             error:function(){   
+//                             }
+//                         })
+//                     },
+//                 error:function(){   
+//                 }
+//             })
+//         },
+//         error:function(){
             
-        }
-    })
-})
-    </script>
+//         }
+//     })
+// })
+//     </script>
 </body>
 </html>
